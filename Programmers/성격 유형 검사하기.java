@@ -9,14 +9,6 @@ class Conversion{
     }
 }
 
-class Indicator{
-    String type;
-    int score;
-    public Indicator(String type, int score){
-        this.type = type;
-        this.score = score; 
-    }
-}
 
 class Solution {
     public String solution(String[] survey, int[] choices) {
