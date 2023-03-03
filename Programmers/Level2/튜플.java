@@ -20,15 +20,16 @@ class Solution {
         List<String> list = new ArrayList<>(); 
         
         String each = ""; 
+        boolean flag = false;
         for(char c : s.toCharArray()){
-            if(c == '{') stack.push(c);
+            if(c == '{') flag = true;
              else if(c == '}'){
-                stack.pop();
+                flag = false;
                 list.add(each);
                 each=""; 
             }
             else{
-                if(!stack.isEmpty() && stack.peek()=='{') each+=c; 
+                if(flag) each+=c; 
             }
         }
 
